@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = 'vjenix-v1';
+﻿const CACHE_NAME = 'vjenix-v2';
 const urlsToCache = ['/','/index.html','/manifest.json','/images/icon-192.png','/images/icon-512.png'];
 
 self.addEventListener('install', e => {
