@@ -200,6 +200,46 @@
         .grade-list li { color:#9aa0b8; font-size:12px; padding:2px 0; }
         .grade-list li strong { color:#fff; }
 
+        /* ── Ecosystem ── */
+        .ecosystem { padding:80px 5%; width:100%; }
+        .eco-grid {
+            display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:16px; max-width:1340px; margin:0 auto;
+        }
+        .eco-card {
+            display:flex; align-items:center; gap:14px;
+            background:rgba(18,23,42,0.65); backdrop-filter:blur(14px);
+            border:1px solid rgba(0,242,254,0.1); border-radius:16px;
+            padding:18px 20px; text-decoration:none; color:white;
+            transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+        .eco-card:hover {
+            transform:translateY(-4px);
+            border-color:rgba(0,242,254,0.4);
+            box-shadow:0 16px 40px rgba(0,242,254,0.12);
+        }
+        .eco-card.muted { cursor:default; opacity:0.6; }
+        .eco-card.muted:hover { transform:none; box-shadow:none; border-color:rgba(0,242,254,0.1); }
+        .eco-icon {
+            width:42px; height:42px; border-radius:11px; flex-shrink:0;
+            display:flex; align-items:center; justify-content:center;
+            font-size:18px; background:rgba(0,242,254,0.1); color:#00f2fe;
+        }
+        .eco-icon.green  { background:rgba(0,255,136,0.1); color:#00ff88; }
+        .eco-icon.purple { background:rgba(155,93,229,0.12); color:#9b5de5; }
+        .eco-icon.orange { background:rgba(255,165,0,0.1); color:#ffa500; }
+        .eco-info { display:flex; flex-direction:column; flex:1; min-width:0; }
+        .eco-name { font-size:15px; font-weight:700; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .eco-type { font-size:12px; color:#7a82a0; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .eco-badge {
+            font-size:11px; font-weight:700; padding:3px 10px;
+            border-radius:20px; white-space:nowrap; flex-shrink:0;
+        }
+        .eco-badge.live   { background:rgba(0,255,136,0.15); color:#00ff88; border:1px solid rgba(0,255,136,0.3); }
+        .eco-badge.soon   { background:rgba(0,242,254,0.1);  color:#00f2fe; border:1px solid rgba(0,242,254,0.2); }
+        .eco-badge.dev    { background:rgba(255,165,0,0.1);  color:#ffa500; border:1px solid rgba(255,165,0,0.25); }
+        .eco-badge.purple { background:rgba(155,93,229,0.15);color:#9b5de5; border:1px solid rgba(155,93,229,0.3); }
+
         /* ── Research ── */
         .research-article { padding:90px 5%; width:100%; }
         .article-container {
@@ -306,7 +346,6 @@
             <a href="#projects">Projects</a>
             <a href="#research">R&D</a>
             <a href="#contact">Contact</a>
-            <a href="https://vvbsdigital.com" target="_blank" style="color:#00f2fe;">VVBS Media</a>
         </div>
     </nav>
 
@@ -356,23 +395,6 @@
                 <h3>Vijox</h3>
                 <p class="card-desc">Advanced voice sharing application — Revolutionizing voice-based services with AI-driven recognition and real-time translation for Indian languages.</p>
                 <span class="badge badge-cyan">COMING SOON</span>
-            </div>
-
-            <!-- VVBS Digital Media -->
-            <div class="project-card purple-glow reveal reveal-delay-5">
-                <div class="card-icon purple"><i class="fas fa-broadcast-tower"></i></div>
-                <div class="card-type">Media Network</div>
-                <h3>VVBS Digital Media Network</h3>
-                <p class="card-desc"><strong style="color:#00f2fe;">A Unit of VJenix</strong> — Digital media ecosystem for educational content, podcasts, and community engagement.</p>
-                <ul class="feature-list">
-                    <li><i class="fab fa-youtube ic-orange"></i> YouTube: HistoryXShorts, VVBS Civils</li>
-                    <li><i class="fas fa-podcast"></i> TeachPod Podcast</li>
-                    <li><i class="fab fa-twitter"></i> StudentsUnionIndia (9000+ members)</li>
-                    <li><i class="fas fa-chart-line"></i> Digital Media Management Services</li>
-                </ul>
-                <a href="https://vvbsdigital.com" target="_blank" style="text-decoration:none;">
-                    <span class="badge badge-purple" style="display:inline-block; margin-top:10px;">VISIT VVBS →</span>
-                </a>
             </div>
 
             <!-- TAPASYA -->
@@ -434,6 +456,78 @@
                     </ul>
                 </div>
                 <span class="badge badge-orange">IN DEVELOPMENT</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── ECOSYSTEM LINKS ── -->
+    <section class="ecosystem reveal">
+        <h2 class="section-title">Our Ecosystem</h2>
+        <div class="section-divider"></div>
+        <div class="eco-grid">
+
+            <a href="https://www.gigway.in/" target="_blank" class="eco-card">
+                <div class="eco-icon"><i class="fas fa-rocket"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">Gigway</span>
+                    <span class="eco-type">AI Freelancing Platform</span>
+                </div>
+                <span class="eco-badge live">● LIVE</span>
+            </a>
+
+            <a href="https://www.orenzaa.com" target="_blank" class="eco-card">
+                <div class="eco-icon green"><i class="fas fa-home"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">Orenzaa</span>
+                    <span class="eco-type">AI Property Platform</span>
+                </div>
+                <span class="eco-badge live">● LIVE</span>
+            </a>
+
+            <a href="tapasya-privacy.html" class="eco-card">
+                <div class="eco-icon green"><i class="fas fa-fire-alt"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">TAPASYA</span>
+                    <span class="eco-type">Android Study Tracker App</span>
+                </div>
+                <span class="eco-badge live">● ACTIVE</span>
+            </a>
+
+            <a href="https://vvbsdigital.com" target="_blank" class="eco-card">
+                <div class="eco-icon purple"><i class="fas fa-broadcast-tower"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">VVBS Digital Media</span>
+                    <span class="eco-type">YouTube · Podcast · Community</span>
+                </div>
+                <span class="eco-badge purple">VISIT →</span>
+            </a>
+
+            <div class="eco-card muted">
+                <div class="eco-icon purple"><i class="fas fa-film"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">Vijako</span>
+                    <span class="eco-type">Short Video App</span>
+                </div>
+                <span class="eco-badge soon">COMING SOON</span>
+            </div>
+
+            <div class="eco-card muted">
+                <div class="eco-icon purple"><i class="fas fa-microphone-alt"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">Vijox</span>
+                    <span class="eco-type">Voice Sharing App</span>
+                </div>
+                <span class="eco-badge soon">COMING SOON</span>
+            </div>
+
+            <div class="eco-card muted">
+                <div class="eco-icon orange"><i class="fas fa-trophy"></i></div>
+                <div class="eco-info">
+                    <span class="eco-name">LeaderIQ</span>
+                    <span class="eco-type">Social Media Analytics PWA</span>
+                </div>
+                <span class="eco-badge dev">IN DEV</span>
             </div>
 
         </div>
@@ -513,7 +607,6 @@
 
     <footer class="footer">
         <div class="company">VJENIX FUTURISTIC TECHNOLOGIES</div>
-        <p style="margin-top:10px;">A Unit: <a href="https://vvbsdigital.com" target="_blank" style="color:#00f2fe; text-decoration:none;">VVBS Digital Media</a></p>
         <p style="margin-top:12px;">© 2024 Vjenix. All rights reserved.</p>
     </footer>
 
