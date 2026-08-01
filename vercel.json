@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/tapasya/admin", "destination": "/tapasya/admin/index.html" },
+    { "source": "/tapasya/admin/:path*", "destination": "/tapasya/admin/index.html" }
+  ]
+}
